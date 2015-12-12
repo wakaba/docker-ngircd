@@ -5,4 +5,4 @@ $ docker run -t -p 6697:6697 \
       -e TLS_CERT_PATH=/cert/irc.example.net \
       -e IRC_HOSTNAME=irc.example.net \
       -e IRC_ADMIN_EMAIL=admin@irc.example.net \
-      wakaba/docker-ngircd
+      quay.io/wakaba/docker-ngircd
