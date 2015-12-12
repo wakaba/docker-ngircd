@@ -1,0 +1,8 @@
+$ cp cert.pem /cert-files/irc.example.net/fullchain.pem
+$ cp private.pem /cert-files/irc.example.net/privkey.pem
+$ docker run -t -p 6697:6697 \
+      -v /cert-files:/cert:ro \
+      -e TLS_CERT_PATH=/cert/irc.example.net \
+      -e IRC_HOSTNAME=irc.example.net \
+      -e IRC_ADMIN_EMAIL=admin@irc.example.net \
+      wakaba/docker-ngircd
