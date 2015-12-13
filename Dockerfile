@@ -2,8 +2,7 @@ FROM debian
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install ngircd && \
-    rm -rf /var/lib/apt/lists/* && \
-    usermod -G root irc
+    rm -rf /var/lib/apt/lists/*
 
 ADD ngircd.conf /ngircd.conf.template
 ADD server.sh /server
