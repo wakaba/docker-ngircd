@@ -1,4 +1,6 @@
-FROM debian
+#FROM debian
+#XXX
+FROM debian:stretch
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install ngircd && \
