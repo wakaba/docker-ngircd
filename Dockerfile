@@ -1,6 +1,4 @@
-#FROM debian
-#XXX
-FROM debian:stretch
+FROM quay.io/wakaba/base:stable
 
 RUN apt-get update && \
     DEBIAN_FRONTEND="noninteractive" apt-get -y install ngircd && \
